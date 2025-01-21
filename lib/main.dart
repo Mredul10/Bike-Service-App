@@ -1,4 +1,4 @@
-import 'package:bike_service_app/care_page.dart';
+import 'package:bike_service_app/screens/care_page_screen/care_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
