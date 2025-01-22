@@ -112,24 +112,26 @@ class _HomePageState extends State<HomePage> {
       ),
     body: Padding(
       padding: const EdgeInsets.symmetric(horizontal:20),
-      child: Column(
-        children: [
-          NearbyUser(),
-            SizedBox(height:10,),
-            Deals(),
-            SizedBox(height: 20,),
-            Events(),
-            SizedBox(height: 10,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Buy Service Packages',style: GoogleFonts.inter(fontWeight: FontWeight.w600, fontSize: 16,),), 
-                Text('View All>',style: GoogleFonts.inter(fontWeight: FontWeight.w400, fontSize: 14, color: Color(0xFF584CF4),),) ,
-                ],
-            ),
-            SizedBox(height: 10,),
-            Expanded(
-              child: GridView.builder(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            NearbyUser(),
+              SizedBox(height:10,),
+              Deals(),
+              SizedBox(height: 20,),
+              Events(),
+              SizedBox(height: 10,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Buy Service Packages',style: GoogleFonts.inter(fontWeight: FontWeight.w600, fontSize: 16,),), 
+                  Text('View All>',style: GoogleFonts.inter(fontWeight: FontWeight.w400, fontSize: 14, color: Color(0xFF584CF4),),) ,
+                  ],
+              ),
+              SizedBox(height: 10,),
+              GridView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 14,
@@ -146,11 +148,12 @@ class _HomePageState extends State<HomePage> {
                   );
                 },
               ),
-            ),
-        ],
+          ],
+        ),
       ),
     ),
     bottomNavigationBar: BottomNavigationBar(
+      showUnselectedLabels: true,
         selectedItemColor: Color(0XFF584CF4),
         unselectedItemColor: Colors.grey,
         currentIndex: 0,

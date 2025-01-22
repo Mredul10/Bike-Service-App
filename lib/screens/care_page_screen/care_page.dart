@@ -119,6 +119,7 @@ class _CarePageState extends State<CarePage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        showUnselectedLabels: true,
         selectedItemColor: Color(0XFF584CF4),
         unselectedItemColor: Colors.grey,
         currentIndex: 2,
