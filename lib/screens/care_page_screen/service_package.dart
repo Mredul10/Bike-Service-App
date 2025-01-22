@@ -47,24 +47,24 @@ class ServicePackage extends StatelessWidget {
                 ],
             ),
             SizedBox(height: 10,),
-            Expanded(
-              child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 14,
-                    mainAxisSpacing: 10,
-                    childAspectRatio: 1.15),
-                     itemCount: services.length,
-                     itemBuilder: (context, index) {
-                  return ServicesCard(
-                    image: services[index]["image"],
-                    title: services[index]["title"],
-                    discountedPrice: services[index]["discountedPrice"],
-                    orginalprice: services[index]["originalPrice"],
-                    discount: services[index]["discount"],
-                  );
-                },
-              ),
+            GridView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 14,
+                  mainAxisSpacing: 10,
+                  childAspectRatio: 1.15),
+                   itemCount: services.length,
+                   itemBuilder: (context, index) {
+                return ServicesCard(
+                  image: services[index]["image"],
+                  title: services[index]["title"],
+                  discountedPrice: services[index]["discountedPrice"],
+                  orginalprice: services[index]["originalPrice"],
+                  discount: services[index]["discount"],
+                );
+              },
             ),
       ],
     );

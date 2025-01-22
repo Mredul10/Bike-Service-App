@@ -1,4 +1,5 @@
 import 'package:bike_service_app/screens/care_page_screen/recommendation.dart';
+import 'package:bike_service_app/screens/care_page_screen/service_package.dart';
 import 'package:bike_service_app/screens/care_page_screen/services_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart'; 
@@ -76,46 +77,22 @@ class _CarePageState extends State<CarePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal:20),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Bike name',style: GoogleFonts.inter(fontWeight: FontWeight.w500, fontSize: 14,),), 
-                Text('Change',style: GoogleFonts.inter(fontWeight: FontWeight.w500, fontSize: 14, color: Color(0xFF584CF4),),) ,
-                ],
-            ),
-            SizedBox(height: 20,),
-            Recommendation(),
-            SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Buy Service Packages',style: GoogleFonts.inter(fontWeight: FontWeight.w600, fontSize: 16,),), 
-                Text('View All>',style: GoogleFonts.inter(fontWeight: FontWeight.w400, fontSize: 14, color: Color(0xFF584CF4),),) ,
-                ],
-            ),
-            SizedBox(height: 10,),
-            Expanded(
-              child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 14,
-                    mainAxisSpacing: 10,
-                    childAspectRatio: 1.15),
-                     itemCount: services.length,
-                     itemBuilder: (context, index) {
-                  return ServicesCard(
-                    image: services[index]["image"],
-                    title: services[index]["title"],
-                    discountedPrice: services[index]["discountedPrice"],
-                    orginalprice: services[index]["originalPrice"],
-                    discount: services[index]["discount"],
-                  );
-                },
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Bike name',style: GoogleFonts.inter(fontWeight: FontWeight.w500, fontSize: 14,),), 
+                  Text('Change',style: GoogleFonts.inter(fontWeight: FontWeight.w500, fontSize: 14, color: Color(0xFF584CF4),),) ,
+                  ],
               ),
-            ),
-          ],
+              SizedBox(height: 20,),
+              Recommendation(),
+              SizedBox(height: 20,),
+              ServicePackage(),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
