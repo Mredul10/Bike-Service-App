@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class RecommendationCard extends StatelessWidget {
-  final String? title;
-  final String? image;
-  const RecommendationCard({super.key, this.title, this.image});
+class EventsCard extends StatelessWidget {
+  final String? eventTitle;
+  final String? eventImage;
+  const EventsCard({super.key, this.eventTitle, this.eventImage});
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +12,11 @@ class RecommendationCard extends StatelessWidget {
       children: [
         Container(
           height: 90,
-          width: (MediaQuery.of(context).size.width / 3) - 24,
+          width: (MediaQuery.of(context).size.width / 2) - 54,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
             image: DecorationImage(
-                image: AssetImage(image!),
+                image: AssetImage(eventImage!),
                 fit: BoxFit.cover
             ),
           ),
@@ -25,7 +25,7 @@ class RecommendationCard extends StatelessWidget {
           height: 10,
         ),
         Text(
-          title!,
+          eventTitle!,
           style: TextStyle(
               color: Color(0xFF666666),
               fontWeight: FontWeight.w500,

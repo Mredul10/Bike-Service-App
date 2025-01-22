@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class RecommendationCard extends StatelessWidget {
+class NearbyUserCard extends StatelessWidget {
   final String? title;
   final String? image;
-  const RecommendationCard({super.key, this.title, this.image});
+  const NearbyUserCard({super.key, this.title, this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +11,10 @@ class RecommendationCard extends StatelessWidget {
       // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: 90,
-          width: (MediaQuery.of(context).size.width / 3) - 24,
+          height: 54,
+          width: (MediaQuery.of(context).size.width / 5) -24,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
+            shape: BoxShape.circle,
             image: DecorationImage(
                 image: AssetImage(image!),
                 fit: BoxFit.cover
@@ -28,8 +28,8 @@ class RecommendationCard extends StatelessWidget {
           title!,
           style: TextStyle(
               color: Color(0xFF666666),
-              fontWeight: FontWeight.w500,
-              fontSize: 14),
+              fontWeight: FontWeight.w400,
+              fontSize: 13),
         ),
       ],
     );

@@ -1,4 +1,5 @@
 import 'package:bike_service_app/screens/care_page_screen/care_page.dart';
+import 'package:bike_service_app/screens/home_page_screen/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: CarePage(),
+      home: HomePage(),
     );
   }
 }

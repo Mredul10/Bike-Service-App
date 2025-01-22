@@ -1,28 +1,64 @@
-import 'package:bike_service_app/screens/care_page_screen/recommendation.dart';
-import 'package:bike_service_app/screens/care_page_screen/services_card.dart';
+import 'package:bike_service_app/screens/home_page_screen/deals.dart';
+import 'package:bike_service_app/screens/home_page_screen/events.dart';
+import 'package:bike_service_app/screens/home_page_screen/nearby_user.dart';
+import 'package:bike_service_app/screens/home_page_screen/service.dart';
+import 'package:bike_service_app/screens/home_page_screen/service_packege_card.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart'; 
+import 'package:google_fonts/google_fonts.dart';
 
-
-class CarePage extends StatefulWidget {
-  const CarePage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<CarePage> createState() => _CarePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _CarePageState extends State<CarePage> {
-      List image = [
-      "assets/images/spark_plug.png",
-      "assets/images/clutch_shoe.png",
-      "assets/images/hose_fuel.png",
+class _HomePageState extends State<HomePage> {
+  List image = [
+      "assets/images/Ankita.png",
+      'assets/images/Pankaj.png',
+      'assets/images/Manisha.png',
+      "assets/images/Suresh.png",
+      'assets/images/ankur.png',
+      'assets/images/Deepak.png',
     ];
     List title = [
-      "Spark Plug",
-      "Clutch Shoe",
-      "Hose Fuel",
+      'Ankita',
+      'Pankaj',
+      'Manisha',
+      'Suresh',
+      'Ankur',
+      'Deepak',
     ];
- List services = [
+    List deals = [
+   {
+    "image": "assets/images/healmate1.png",
+    "title": "Racing Dual Visor Helmet",
+    "discountedPrice": "\$4079",
+    "originalPrice": "\$5000",
+    "discount": "20% Off",
+    "ratings": "4.8(212)",
+   },
+   {
+    "image": "assets/images/healmate2.png",
+    "title": "Aerodynamic Helmet",
+    "discountedPrice": "\$2799",
+    "originalPrice": "\$3499",
+    "discount": "20% Off",
+    "ratings": "5.8(212)",
+    },
+  ];
+  List eventImage = [
+      "assets/images/manali.png",
+      'assets/images/gujrat.png',
+      'assets/images/kasmir.png',
+    ];
+    List eventTitle = [
+      'Shimla to Manali',
+      'Goa to Gujarat',
+      'Kashmir Trip',
+    ];
+    List services = [
   {
     "image": "assets/images/1.png",
     "title": "Annual Maintenance",
@@ -58,7 +94,7 @@ class _CarePageState extends State<CarePage> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         leading: Icon(Icons.menu, color: Colors.white,),
-        title: Text('Care',style: GoogleFonts.inter(fontWeight: FontWeight.w600, fontSize: 16, color: Colors.white,),),
+        title: Text('Home',style: GoogleFonts.inter(fontWeight: FontWeight.w600, fontSize: 16, color: Colors.white,),),
         actions: [
           IconButton( 
             icon: Icon(Icons.search,color: Colors.white,), 
@@ -74,20 +110,16 @@ class _CarePageState extends State<CarePage> {
               ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal:20),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Bike name',style: GoogleFonts.inter(fontWeight: FontWeight.w500, fontSize: 14,),), 
-                Text('Change',style: GoogleFonts.inter(fontWeight: FontWeight.w500, fontSize: 14, color: Color(0xFF584CF4),),) ,
-                ],
-            ),
+    body: Padding(
+      padding: const EdgeInsets.symmetric(horizontal:20),
+      child: Column(
+        children: [
+          NearbyUser(),
+            SizedBox(height:10,),
+            Deals(),
             SizedBox(height: 20,),
-            Recommendation(),
-            SizedBox(height: 20,),
+            Events(),
+            SizedBox(height: 10,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -105,7 +137,7 @@ class _CarePageState extends State<CarePage> {
                     childAspectRatio: 1.15),
                      itemCount: services.length,
                      itemBuilder: (context, index) {
-                  return ServicesCard(
+                  return ServicePackegeCard(
                     image: services[index]["image"],
                     title: services[index]["title"],
                     discountedPrice: services[index]["discountedPrice"],
@@ -115,13 +147,13 @@ class _CarePageState extends State<CarePage> {
                 },
               ),
             ),
-          ],
-        ),
+        ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
+    ),
+    bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Color(0XFF584CF4),
         unselectedItemColor: Colors.grey,
-        currentIndex: 2,
+        currentIndex: 0,
         items:[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home',),
           BottomNavigationBarItem(icon: Icon(Icons.grid_view), label: 'Products'),
