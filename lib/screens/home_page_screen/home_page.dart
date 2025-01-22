@@ -81,13 +81,14 @@ class _HomePageState extends State<HomePage> {
     "discount": "15% Off",
   },
   {
-    "image": "assets/images/4.png",
-    "title": "Brake Pad",
-    "discountedPrice": "\$1350",
-    "originalPrice": "\$1500",
-    "discount": "15% Off",
+    'image': 'assets/images/4.png',
+    'title': 'Brake Pad',
+    'discountedPrice': '\$1350',
+    'originalPrice': '\$1500',
+    'discount': '15% Off',
   },
 ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -140,11 +141,11 @@ class _HomePageState extends State<HomePage> {
                      itemCount: services.length,
                      itemBuilder: (context, index) {
                   return ServicePackegeCard(
-                    image: services[index]["image"],
-                    title: services[index]["title"],
-                    discountedPrice: services[index]["discountedPrice"],
-                    orginalprice: services[index]["originalPrice"],
-                    discount: services[index]["discount"],
+                    image: services[index]['image'],
+                    title: services[index]['title'],
+                    discountedPrice: services[index]['discountedPrice'],
+                    orginalprice: services[index]['originalPrice'],
+                    discount: services[index]['discount'],
                   );
                 },
               ),
@@ -160,9 +161,9 @@ class _HomePageState extends State<HomePage> {
         items:[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home',),
           BottomNavigationBarItem(icon: Icon(Icons.grid_view), label: 'Products'),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Care"),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_bag), label: "Shop"),
-          BottomNavigationBarItem(icon: Icon(Icons.people), label: "Community"),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Care'),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_bag), label: 'Shop'),
+          BottomNavigationBarItem(icon: Icon(Icons.people), label: 'Community'),
 
       ],),
     );
