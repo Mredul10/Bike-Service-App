@@ -19,33 +19,39 @@ class Events extends StatelessWidget {
     ];
     return Column(
       children: [
-        Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Upcoming Events',style: GoogleFonts.inter(fontWeight: FontWeight.w600, fontSize: 16,),), 
-                Text('View All>',style: GoogleFonts.inter(fontWeight: FontWeight.w400, fontSize: 14, color: Color(0xFF584CF4),),) ,
-                ],
-            ),
-             SizedBox(height: 10,),
-             SizedBox(
-              height: 130,
-              child: ListView.separated(
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                itemCount: 3,
-                itemBuilder: (BuildContext context, int index) {
-                  return EventsCard(
-                    eventImage: eventImage[index],
-                    eventTitle: eventTitle[index],
-                  );
-                },
-                separatorBuilder: (BuildContext context, int index) {
-                  return SizedBox(
-                    width: 10,
-                  );
-                },
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal:20),
+          child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Upcoming Events',style: GoogleFonts.inter(fontWeight: FontWeight.w600, fontSize: 16,),), 
+                  Text('View All>',style: GoogleFonts.inter(fontWeight: FontWeight.w400, fontSize: 14, color: Color(0xFF584CF4),),) ,
+                  ],
               ),
-            ),
+        ),
+             SizedBox(height: 10,),
+             Padding(
+               padding: const EdgeInsets.only(left: 20),
+               child: SizedBox(
+                height: 130,
+                child: ListView.separated(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 3,
+                  itemBuilder: (BuildContext context, int index) {
+                    return EventsCard(
+                      eventImage: eventImage[index],
+                      eventTitle: eventTitle[index],
+                    );
+                  },
+                  separatorBuilder: (BuildContext context, int index) {
+                    return SizedBox(
+                      width: 10,
+                    );
+                  },
+                ),
+                           ),
+             ),
       ],
     );
   }

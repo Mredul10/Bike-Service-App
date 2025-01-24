@@ -111,26 +111,24 @@ class _HomePageState extends State<HomePage> {
               ),
         ],
       ),
-    body: Padding(
-      padding: const EdgeInsets.symmetric(horizontal:20),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            NearbyUser(),
-              SizedBox(height:10,),
-              Deals(),
-              SizedBox(height: 20,),
-              Events(),
-              SizedBox(height: 10,),
-              Service(),
-          ],
-        ),
+    body: SingleChildScrollView(
+      child: Column(
+        children: [
+          SizedBox(height:10,),
+          NearbyUser(),
+          SizedBox(height:10,),
+          Deals(),
+          SizedBox(height: 20,),
+          Events(),
+          SizedBox(height: 10,),
+          Service(),
+        ],
       ),
     ),
     bottomNavigationBar: BottomNavigationBar(
       showUnselectedLabels: true,
         selectedItemColor: Color(0XFF584CF4),
-        unselectedItemColor: Colors.grey,
+        unselectedItemColor: Color(0xFF666666),
         currentIndex: 0,
         items:[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home',),

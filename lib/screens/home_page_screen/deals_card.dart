@@ -56,7 +56,7 @@ class DealsCard extends StatelessWidget {
                           Text(
                             orginalprice!,
                             style: TextStyle(
-                                color: Color(0xFF888888),
+                                color: Color(0xFF666666),
                                 fontWeight: FontWeight.w400,
                                 fontSize: 12),
                           ),
@@ -82,7 +82,7 @@ class DealsCard extends StatelessWidget {
                           Text(
                               ratings!,
                                 style: TextStyle(
-                                    color: Color(0XFF888888),
+                                    color: Color(0xFF666666),
                                     fontWeight: FontWeight.w500,
                                     fontSize: 14),
                               ),

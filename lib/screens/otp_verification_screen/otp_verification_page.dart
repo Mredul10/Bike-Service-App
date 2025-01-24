@@ -23,10 +23,10 @@ class OtpVerificationPage extends StatelessWidget {
                 SizedBox(height: 20,),
                 Container(
                   width: 340,
-                  child: Text('Please enter the code we have sent to your phone number 7500180475',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w400,color: Color.fromARGB(255, 131, 128, 128),),textAlign: TextAlign.center),
+                  child: Text('Please enter the code we have sent to your phone number 7500180475',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w400,color: Color(0xFF666666),),textAlign: TextAlign.center),
                 ),
                 SizedBox(height: 46,),
-                Text('OTP',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w500,color: Color.fromARGB(255, 131, 128, 128),),),
+                Text('OTP',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w500,color: Color(0xFF666666),),),
               SizedBox(height: 15,),
               Container(
                 child: Row(
@@ -81,7 +81,7 @@ class OtpVerificationPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Didn’t receive anything?',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w400,color: Color.fromARGB(255, 131, 128, 128),),),
+                  Text('Didn’t receive anything?',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w400,color: Color(0xFF666666),),),
                   SizedBox(width: 5,),
                   Text('Resend Code',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w400,color: Color(0xFF584CF4),),),
                 ],

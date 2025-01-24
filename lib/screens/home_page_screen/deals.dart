@@ -27,35 +27,41 @@ class Deals extends StatelessWidget {
   ];
     return Column(
       children: [
-        Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Deals of the Day',style: GoogleFonts.inter(fontWeight: FontWeight.w600, fontSize: 16,),), 
-                Text('View All>',style: GoogleFonts.inter(fontWeight: FontWeight.w400, fontSize: 14, color: Color(0xFF584CF4),),) ,
-                ],
-            ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal:20),
+          child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Deals of the Day',style: GoogleFonts.inter(fontWeight: FontWeight.w600, fontSize: 16,),), 
+                  Text('View All>',style: GoogleFonts.inter(fontWeight: FontWeight.w400, fontSize: 14, color: Color(0xFF584CF4),),) ,
+                  ],
+              ),
+        ),
              SizedBox(height: 10,),
-            SizedBox(
-              height: 170,
-              child: ListView.separated(
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                itemCount: 2,
-                itemBuilder: (BuildContext context, int index) {
-                  return DealsCard(
-                    image: deals[index]["image"],
-                    title: deals[index]["title"],
-                    discountedPrice: deals[index]["discountedPrice"],
-                    orginalprice: deals[index]["originalPrice"],
-                    discount: deals[index]["discount"],
-                    ratings: deals[index]["ratings"],
-                  );
-                },
-                separatorBuilder: (BuildContext context, int index) {
-                  return SizedBox(
-                    width: 15,
-                  );
-                },
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal:20),
+              child: SizedBox(
+                height: 170,
+                child: ListView.separated(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 2,
+                  itemBuilder: (BuildContext context, int index) {
+                    return DealsCard(
+                      image: deals[index]["image"],
+                      title: deals[index]["title"],
+                      discountedPrice: deals[index]["discountedPrice"],
+                      orginalprice: deals[index]["originalPrice"],
+                      discount: deals[index]["discount"],
+                      ratings: deals[index]["ratings"],
+                    );
+                  },
+                  separatorBuilder: (BuildContext context, int index) {
+                    return SizedBox(
+                      width: 15,
+                    );
+                  },
+                ),
               ),
             ),
       ],

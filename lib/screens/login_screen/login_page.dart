@@ -21,10 +21,10 @@ class LoginPage extends StatelessWidget {
               SizedBox(height: 20,),
               Container(
                 width: 340,
-                child: Text('Please confirm your country code and enter your phone number.',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w400,color: Color.fromARGB(255, 131, 128, 128),),textAlign: TextAlign.center),
+                child: Text('Please confirm your country code and enter your phone number.',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w400,color: Color(0xFF666666),),textAlign: TextAlign.center),
               ),
               SizedBox(height: 46,),
-              Text('Country',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w500,color: Color.fromARGB(255, 131, 128, 128),),),
+              Text('Country',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w500,color: Color(0xFF666666),),),
               SizedBox(height: 15,),
               Container(
                 width: 340,
@@ -45,13 +45,13 @@ class LoginPage extends StatelessWidget {
                         Text('India',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.black,),)
                       ],
                     ),
-                    Icon(Icons.arrow_forward_ios, color: Color.fromARGB(255, 131, 128, 128), size: 16),
+                    Icon(Icons.arrow_forward_ios, color: Color(0xFF666666), size: 16),
                   ],
                 ),
               ),
               ),
               SizedBox(height: 30,),
-              Text('Phone Number',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w500,color: Color.fromARGB(255, 131, 128, 128),),),
+              Text('Phone Number',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w500,color: Color(0xFF666666),),),
               SizedBox(height: 15,),
               Container(
               padding: EdgeInsets.symmetric(horizontal: 16),

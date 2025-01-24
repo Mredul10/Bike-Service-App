@@ -19,7 +19,7 @@ class OnBoardingPage extends StatelessWidget {
               SizedBox(height: 24,),
               Container(
                 width: 340,
-                child: Text('Use real-time route information to schedule your ride.',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w400, color: Color.fromARGB(255, 131, 128, 128),),textAlign: TextAlign.center,),),
+                child: Text('Use real-time route information to schedule your ride.',style: GoogleFonts.inter(fontSize: 16,fontWeight: FontWeight.w400, color: Color(0xFF666666),),textAlign: TextAlign.center,),),
                 SizedBox(height: 24,),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,7 +39,7 @@ class OnBoardingPage extends StatelessWidget {
                     width: 8,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 131, 128, 128)
+                      color: Color(0xFF666666),
                     ),
                   ),
                   SizedBox(width: 10,),
@@ -48,7 +48,7 @@ class OnBoardingPage extends StatelessWidget {
                     width: 8,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 131, 128, 128)
+                      color: Color(0xFF666666),
                     ),
                   ),
                 ],
