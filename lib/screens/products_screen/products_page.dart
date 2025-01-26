@@ -82,149 +82,154 @@ class _ProductsPageState extends State<ProductsPage> {
               ),
         ],
       ),
-      body: Container(
-        child: Column(
-          children: [
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: 42,
-              decoration: BoxDecoration(
-                color: Colors.white,
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                     Text(
-                    'Bike Name',
-                    style:GoogleFonts.inter(fontSize: 14,fontWeight: FontWeight.w500, color: Colors.black,),
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 42,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                       Text(
+                      'Bike Name',
+                      style:GoogleFonts.inter(fontSize: 14,fontWeight: FontWeight.w500, color: Colors.black,),
+                    ),
+                    Text(
+                      'Change',
+                      style:GoogleFonts.inter(fontSize: 14,fontWeight: FontWeight.w500, color: Color(0xFF584CF4),),
+                    ),
+                    ],
                   ),
-                  Text(
-                    'Change',
-                    style:GoogleFonts.inter(fontSize: 14,fontWeight: FontWeight.w500, color: Color(0xFF584CF4),),
-                  ),
-                  ],
                 ),
               ),
-            ),
-            SizedBox(height: 5,),
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: 215,
-              decoration: BoxDecoration(
-                color: Colors.white,
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 25),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          height: 124,
-                          width: 166,
-                          child: Image.asset('assets/images/bike.png',fit: BoxFit.cover,),
-                        ),
-                        SizedBox(width: 19,),
-                        SizedBox(
-                          width: 138,
-                          height: 50,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFF584CF4),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4),
+              SizedBox(height: 5,),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 215,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 25),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            height: 124,
+                            width: 166,
+                            child: Image.asset('assets/images/bike.png',fit: BoxFit.cover,),
+                          ),
+                          SizedBox(width: 19,),
+                          SizedBox(
+                            width: 138,
+                            height: 50,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Color(0xFF584CF4),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                padding: EdgeInsets.symmetric(vertical: 15),
                               ),
-                              padding: EdgeInsets.symmetric(vertical: 15),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset('assets/images/mobile.png',height: 20,width: 19,),
+                                  SizedBox(width: 10,),
+                                  Text(
+                                'Connect',
+                                style:GoogleFonts.inter(fontSize: 14,fontWeight: FontWeight.w600, color: Colors.white,),
+                              ),
+                                ],
+                              )
                             ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset('assets/images/mobile.png',height: 20,width: 19,),
-                                SizedBox(width: 10,),
-                                Text(
-                              'Connect',
-                              style:GoogleFonts.inter(fontSize: 14,fontWeight: FontWeight.w600, color: Colors.white,),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 23,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: [
+                              Text(
+                              '570 km',
+                              style:GoogleFonts.inter(fontSize: 18,fontWeight: FontWeight.w500, color: Color(0xFF584CF4),),
                             ),
-                              ],
-                            )
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 23,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          children: [
+                            SizedBox(height: 5,),
                             Text(
-                            '570 km',
-                            style:GoogleFonts.inter(fontSize: 18,fontWeight: FontWeight.w500, color: Color(0xFF584CF4),),
+                              'Distance',
+                              style:GoogleFonts.inter(fontSize: 14,fontWeight: FontWeight.w400, color: Colors.black,),
+                            ),
+                          ],
                           ),
-                          SizedBox(height: 5,),
-                          Text(
-                            'Distance',
-                            style:GoogleFonts.inter(fontSize: 14,fontWeight: FontWeight.w400, color: Colors.black,),
+                          SizedBox(width: 49,),
+                          Column(
+                            children: [
+                              Text(
+                              '65 kmph',
+                              style:GoogleFonts.inter(fontSize: 18,fontWeight: FontWeight.w500, color: Color(0xFF584CF4),),
+                            ),
+                            SizedBox(height: 5,),
+                            Text(
+                              'Top Speed',
+                              style:GoogleFonts.inter(fontSize: 14,fontWeight: FontWeight.w400, color: Colors.black,),
+                            ),
+                          ],
+                          ),
+                          SizedBox(width: 49,),
+                          Column(
+                            children: [
+                              Text(
+                              '154',
+                              style:GoogleFonts.inter(fontSize: 18,fontWeight: FontWeight.w500, color: Color(0xFF584CF4),),
+                            ),
+                            SizedBox(height: 5,),
+                            Text(
+                              'Rides',
+                              style:GoogleFonts.inter(fontSize: 14,fontWeight: FontWeight.w400, color: Colors.black,),
+                            ),
+                          ],
                           ),
                         ],
-                        ),
-                        SizedBox(width: 49,),
-                        Column(
-                          children: [
-                            Text(
-                            '65 kmph',
-                            style:GoogleFonts.inter(fontSize: 18,fontWeight: FontWeight.w500, color: Color(0xFF584CF4),),
-                          ),
-                          SizedBox(height: 5,),
-                          Text(
-                            'Top Speed',
-                            style:GoogleFonts.inter(fontSize: 14,fontWeight: FontWeight.w400, color: Colors.black,),
-                          ),
-                        ],
-                        ),
-                        SizedBox(width: 49,),
-                        Column(
-                          children: [
-                            Text(
-                            '154',
-                            style:GoogleFonts.inter(fontSize: 18,fontWeight: FontWeight.w500, color: Color(0xFF584CF4),),
-                          ),
-                          SizedBox(height: 5,),
-                          Text(
-                            'Rides',
-                            style:GoogleFonts.inter(fontSize: 14,fontWeight: FontWeight.w400, color: Colors.black,),
-                          ),
-                        ],
-                        ),
-                      ],
-                    ),
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Expanded(
-              child: GridView.builder(
-                padding: const EdgeInsets.all(8),
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                 crossAxisCount: 4,
-                 crossAxisSpacing: 14,
-                 mainAxisSpacing: 20,
-                 childAspectRatio: 1.15),
-                  itemCount: products.length,
-                  itemBuilder: (context, index) {
-               return ProductsCard(
-                 image: products[index]["image"],
-                 title: products[index]["title"],
-               );
-             },
-            ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Expanded(
+                  child: GridView.builder(
+                    padding: const EdgeInsets.all(8),
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                     crossAxisCount: 4,
+                     crossAxisSpacing: 14,
+                     mainAxisSpacing: 20,
+                     childAspectRatio: 0.65),
+                      itemCount: products.length,
+                      itemBuilder: (context, index) {
+                   return ProductsCard(
+                     image: products[index]["image"],
+                     title: products[index]["title"],
+                   );
+                 },
+                ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(

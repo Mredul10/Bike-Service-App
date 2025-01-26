@@ -1,6 +1,7 @@
 import 'package:bike_service_app/screens/home_page_screen/deals.dart';
 import 'package:bike_service_app/screens/home_page_screen/nearby_user_card.dart';
 import 'package:bike_service_app/screens/shop_page_screen/categories_card.dart';
+import 'package:bike_service_app/screens/shop_page_screen/shop_deals.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -137,7 +138,7 @@ class _ShopPageState extends State<ShopPage> {
                  SizedBox(height:30,),
                   Deals(),
                   SizedBox(height:30,),
-                  Deals(),
+                  ShopDeals(),
                  ],
                 ),
               ),
